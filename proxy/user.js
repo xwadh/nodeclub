@@ -96,7 +96,7 @@ exports.getUserByNameAndKey = function (loginname, key, callback) {
 };
 
 exports.newAndSave = function (name, loginname, pass, email, avatar_url, active, callback) {
-  var user         = new User();
+  var user         = new User();    
   user.name        = loginname;
   user.loginname   = loginname;
   user.pass        = pass;

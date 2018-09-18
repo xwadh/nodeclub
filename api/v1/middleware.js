@@ -12,7 +12,7 @@ var auth = function (req, res, next) {
 
   UserModel.findOne({accessToken: accessToken}, ep.done(function (user) {
     if (!user) {
-      res.status(401);
+       res.status(401);
       return res.send({success: false, error_msg: '错误的accessToken'});
     }
     if (user.is_block) {
